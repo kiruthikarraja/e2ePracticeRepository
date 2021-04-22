@@ -17,12 +17,12 @@
       <![CDATA[Test completed >>>> Reports generated]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-04-06T20:37:29 IST" name="Suite" finished-at="2021-04-06T20:37:40 IST" duration-ms="11223">
+  <suite started-at="2021-04-11T16:22:30 IST" name="Suite" finished-at="2021-04-11T16:22:42 IST" duration-ms="12354">
     <groups>
     </groups>
-    <test started-at="2021-04-06T20:37:29 IST" name="Test" finished-at="2021-04-06T20:37:40 IST" duration-ms="11223">
+    <test started-at="2021-04-11T16:22:30 IST" name="Test" finished-at="2021-04-11T16:22:42 IST" duration-ms="12354">
       <class name="com.practiceAutomation.testcases.LoginFlipkart">
-        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-06T20:37:28 IST" name="setupSuite" finished-at="2021-04-06T20:37:29 IST" duration-ms="1013" status="PASS">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-11T16:22:29 IST" name="setupSuite" finished-at="2021-04-11T16:22:30 IST" duration-ms="1144" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Setting up reports and starting before suite]]>
@@ -32,7 +32,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- setupSuite -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-06T20:37:29 IST" name="setup" finished-at="2021-04-06T20:37:35 IST" duration-ms="5454" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-11T16:22:30 IST" name="setup" finished-at="2021-04-11T16:22:36 IST" duration-ms="5907" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Setting up browser and starting before class]]>
@@ -42,11 +42,11 @@
             </line>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-06T20:37:35 IST" name="login" finished-at="2021-04-06T20:37:39 IST" duration-ms="4535" status="PASS">
+        <test-method signature="login()[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-11T16:22:36 IST" name="login" finished-at="2021-04-11T16:22:40 IST" duration-ms="4599" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardownMethod(org.testng.ITestResult)[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-06T20:37:39 IST" name="teardownMethod" finished-at="2021-04-06T20:37:40 IST" duration-ms="436" status="PASS">
+        <test-method is-config="true" signature="teardownMethod(org.testng.ITestResult)[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-11T16:22:40 IST" name="teardownMethod" finished-at="2021-04-11T16:22:41 IST" duration-ms="997" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -60,7 +60,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- teardownMethod -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-06T20:37:40 IST" name="teardown" finished-at="2021-04-06T20:37:40 IST" duration-ms="743" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.practiceAutomation.testcases.LoginFlipkart@41e1e210]" started-at="2021-04-11T16:22:41 IST" name="teardown" finished-at="2021-04-11T16:22:42 IST" duration-ms="798" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -30,20 +30,26 @@ public class BaseClass {
 		Reporter.log("Setting up reports and starting before suite", true);
 		excel=new ExcelDataProvider();
 		config=new ConfigDataProvider();
-		System.out.println("Report path is " + System.getProperty("user.dir")+"\\Reports"+Helper.getCurrentDateTime()+".html");
+		String reportPath=System.getProperty("user.dir") +"\\Reports" + "\\Report" + Helper.getCurrentDateTime() +".html";
+
+		System.out.println("Report path -" + reportPath);
 		ExtentHtmlReporter extent =new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"\\Reports" + "\\Report"+Helper.getCurrentDateTime()+".html"));
 		report=new ExtentReports();
 		report.attachReporter(extent);
 		Reporter.log("Setting up reports DONE and before suite done", true);
 	}
 	
+	@Parameters({"browser","practiceURL"})
 	@BeforeClass
-	public void setup()
+	public void setup(String browser,String practiceURL)
 	{
 		Reporter.log("Setting up browser and starting before class", true);
 
-		driver=BrowserFactory.startBrowser(driver, config.getBrowserFromPropFile(), config.getURLFromPropFile());
+		//driver=BrowserFactory.startBrowser(driver, config.getBrowserFromPropFile(), config.getURLFromPropFile());
+		
+		driver=BrowserFactory.startBrowser(driver, browser, practiceURL);
 		System.out.println("driver done!");
+	
 		Reporter.log("Setting up browser DONE and before class done", true);
 
 	}
@@ -54,7 +60,7 @@ public class BaseClass {
 		BrowserFactory.quitBrowser(driver);
 		System.out.println("Browser quit successfully.");
 	}
-	@AfterMethod
+	@AfterMethod(alwaysRun = true)
 	public void teardownMethod(ITestResult result)
 	{		
 
@@ -62,7 +68,7 @@ public class BaseClass {
 		{		
 		try {
 			logger.pass("Test Passed ", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
-			System.out.println("Report generated");
+			System.out.println("Report generated success");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -72,14 +78,15 @@ public class BaseClass {
 		else if (result.getStatus()==ITestResult.FAILURE)
 		{		
 		try {
-			logger.pass("Test Failed ", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
-			System.out.println("Report generated");
+			logger.fail("Test Failed ", MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshot(driver)).build());
+			System.out.println("Report generated failed case");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		}
 
+		report.flush();
 		System.out.println("Report output is " + Reporter.getOutput());
 
 		Reporter.log("Test completed >>>> Reports generated", true);
